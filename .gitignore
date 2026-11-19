@@ -1,0 +1,6 @@
+# Virtual Environemnt
+venv/
+
+# Machine Learning Model
+model/PayPredictor.pkl
+
