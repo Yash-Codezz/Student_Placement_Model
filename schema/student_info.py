@@ -15,7 +15,7 @@ class StudentInfo(BaseModel):
     backlogs: Annotated[int, Field(..., description='Any Backlogs of Student', example=0)]
     coding_skills: Annotated[float, Field(..., gt=0, description='How good is student at Coding', example=8.0)]
     dsa_score: Annotated[float, Field(..., gt=0, lt=10, description='How Good is Student DSA', example=8.0)]
-    aptitude_Score: Annotated[float, Field(..., gt=0, lt=10, description='How good is Student at aptitude', example=8.0)]
+    aptitude_score: Annotated[float, Field(..., gt=0, lt=10, description='How good is Student at aptitude', example=8.0)]
     communication_skills: Annotated[float, Field(..., gt=0, lt=10, description='Student Communication Skills', example=7.5)]
     ml_knowledge: Annotated[float, Field(..., lt=10, description='How good is student at machine learning', example=9.0)]
     system_design: Annotated[float, Field(..., lt=10, description='How well student know about system design', example=7.5)]
@@ -23,7 +23,7 @@ class StudentInfo(BaseModel):
     projects_count: Annotated[int, Field(..., description='Number of projects completed', example=3)]
     certifications: Annotated[int, Field(..., description='Number of certifications earned', example=2)]
     hackathons: Annotated[int, Field(..., description='How many hackathons student has participated', example=1)]
-    open_souce_contributions: Annotated[int, Field(..., description='Number of open-source contributions', example=1)]
+    open_source_contributions: Annotated[int, Field(..., description='Number of open-source contributions', example=1)]
     extracurriculars: Annotated[int, Field(..., description='Is student involved in extracurriculars', example=1)]
 
     @field_validator('branch', mode='before')

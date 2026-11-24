@@ -11,9 +11,9 @@ import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-REG_MODEL_PATH = os.path.join(BASE_DIR, 'model/PayPredictor.pkl')
+REG_MODEL_PATH = os.path.join(BASE_DIR, 'PayPredictor.pkl')
 
-CLS_MODEL_PATH = os.path.join(BASE_DIR, 'model/JobPredictor.pkl')
+CLS_MODEL_PATH = os.path.join(BASE_DIR, 'JobPredictor.pkl')
 
 reg_model = joblib.load(REG_MODEL_PATH)
 
