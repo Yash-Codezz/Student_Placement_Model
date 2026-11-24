@@ -15,7 +15,7 @@ class StudentInfo(BaseModel):
     backlogs: Annotated[int, Field(..., description='Any Backlogs of Student', example=0)]
     coding_skills: Annotated[float, Field(..., gt=0, description='How good is student at Coding', example=8.0)]
     dsa_score: Annotated[float, Field(..., gt=0, lt=10, description='How Good is Student DSA', example=8.0)]
-    aptitude_score: Annotated[float, Field(..., gt=0, lt=10, description='How good is Student at aptitude', example=8.0)]
+    aptitude_score: Annotated[float, Field(..., gt=0, le=100, description='How good is Student at aptitude (20-100)', example=70.0)]
     communication_skills: Annotated[float, Field(..., gt=0, lt=10, description='Student Communication Skills', example=7.5)]
     ml_knowledge: Annotated[float, Field(..., lt=10, description='How good is student at machine learning', example=9.0)]
     system_design: Annotated[float, Field(..., lt=10, description='How well student know about system design', example=7.5)]
