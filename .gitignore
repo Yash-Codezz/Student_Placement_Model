@@ -4,3 +4,7 @@ venv/
 # Machine Learning Model
 model/PayPredictor.pkl
 
+# Python cache files
+backend/__pycache__/
+schema/__pycache__
+model/__pycache__
