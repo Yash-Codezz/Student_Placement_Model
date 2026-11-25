@@ -1,0 +1,7 @@
+# Virtual Environment
+venv/
+
+# Python Cache Files
+backend/__pycache__/
+schema/__pycache__
+model/__pycache__
