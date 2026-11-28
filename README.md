@@ -80,7 +80,7 @@ Both models are saved as full **Scikit-Learn Pipelines** incorporating automated
 Student_Placement_Model/
 ├── backend/
 │   └── main.py                     # FastAPI application
-├── Frontend/
+├── frontend/
 │   └── app.py                      # Streamlit UI
 ├── schema/
 │   └── student_info.py             # Pydantic schema validation
