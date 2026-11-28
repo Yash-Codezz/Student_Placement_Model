@@ -80,7 +80,7 @@ Both models are saved as full **Scikit-Learn Pipelines** incorporating automated
 Student_Placement_Model/
 ├── backend/
 │   └── main.py                     # FastAPI application
-├── frontend/
+├── Frontend/
 │   └── app.py                      # Streamlit UI
 ├── schema/
 │   └── student_info.py             # Pydantic schema validation
@@ -94,6 +94,9 @@ Student_Placement_Model/
 │   └── regression_model.py         # Training script for salary regression
 ├── data/
 │   └── student_placement_synthetic.csv   # Synthetic placement dataset
+├── .dockerignore                   # Files excluded from Docker build context
+├── Dockerfile                      # Container image definition (FastAPI + Streamlit)
+├── start.sh                        # Entrypoint script launching backend & frontend
 ├── requirements.txt                # Python dependencies
 └── README.md
 ```
@@ -133,10 +136,22 @@ Interactive Swagger documentation will be available at: `http://127.0.0.1:8000/d
 In a separate terminal, launch the web application:
 
 ```bash
-streamlit run frontend/app.py
+streamlit run Frontend/app.py
 ```
 
 Then navigate to `http://localhost:8501` in your browser.
+
+### Or run with Docker
+
+Build and run both the FastAPI backend and Streamlit frontend in a single container:
+
+```bash
+docker build -t student-placement-model .
+docker run -p 8000:8000 -p 8501:8501 student-placement-model
+```
+
+- FastAPI Swagger docs: `http://127.0.0.1:8000/docs`
+- Streamlit UI: `http://localhost:8501`
 
 ---
 
@@ -151,6 +166,7 @@ Then navigate to `http://localhost:8501` in your browser.
 | **Backend API**          | FastAPI, Uvicorn, Pydantic                                                       |
 | **Frontend UI**          | Streamlit                                                                        |
 | **Model Serialization**  | Joblib                                                                           |
+| **Containerization**     | Docker                                                                           |
 
 ---
 
